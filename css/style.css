@@ -7,7 +7,8 @@
 /* колір фону чим ми займаємося #F5F5F5 */
 /* колір фону наша команда #F5F4FA */
 /* колір фону футера #2F303A*/
-
+/* колір фону кнопки-герой #2196F3 */
+/* колір фону кнопки-герой при hover & focus #188CE8 */
 
 /* кастомні властивості(root), або CSS змінні.
 В них можназберігати певні значення.
@@ -15,7 +16,7 @@
 (для зручності зміни кольорів або іншого,
  шоб не змінювати це вручну) */
 
- /*  letter-spacing for main page
+/*  letter-spacing for main page
  nav-0.02em;
  hero-0.06em;
  main-0.03em;
@@ -27,185 +28,201 @@
  footer-0.03em;
  */
 
- /* Набір шрифтів 
+/* Набір шрифтів 
  Robotto
  400
  500
  700
  900 */
 
- :root{
-    --primary-text-color: #212121;
-    --title-text-color: #757575;
-    --accent-color: #219ff3;
-    --background-color: #ffffff;
-    --footer-text-color:#2F303A;
- }
+:root {
+  --primary-text-color: #212121;
+  --title-text-color: #757575;
+  --accent-color: #219ff3;
+  --background-color: #ffffff;
+  --footer-text-color: #2f303a;
+}
 .body {
-    background-color: #fff;
-    color: var(--primary-text-color) ;
-    font-family: roboto,sans-serif;
-    letter-spacing: 0.02em;
+  background-color: #fff;
+  color: var(--primary-text-color);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.02em;
 }
 
-.list{list-style: none;}
+.list {
+  list-style: none;
+}
 
 /* logo */
 
-.logo{color: var(--primary-text-color);
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2; 
-    letter-spacing: 0.03em;
-    text-decoration: none;
+.logo {
+  color: var(--accent-color);
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: none;
 }
-.accent {
-    color: var(--accent-color);
+.logo-header {
+  color: var(--primary-text-color);
 }
-.accent-word {
-    color: #ffffff;
+.logo-footer {
+  color: #ffffff;
 }
 
 /* site-nav */
 
 .site-nav .link {
-    color: var(--primary-text-color);
-    font-family: 'Roboto';
-font-weight: 500;
-font-size: 14px;
-line-height: 1.2;
-letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-decoration: none;
 }
 
-.site-nav .link:hover, 
-.site-nav .link:focus{
-    color: var(--accent-color) ;
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
 }
 
 .site-nav .link.current {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
-.list-link 
-{color: var(--title-text-color);
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+.list-link {
+  color: var(--title-text-color);
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
 }
 .list-link:hover,
 .list-link:focus {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* main */
 
 .hero-title {
-    color: #212121;
-    font-family: 'Roboto';
-font-weight: 900;
-font-size: 44px;
-line-height: 1.4;
-text-align: center;
-letter-spacing: 0.06em;
-text-transform: uppercase;
+  background-color: #2f303a;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 /* Кнопка-герой */
 
 .hero-button {
-    background-color: var(--accent-color);
-    color: #ffffff;
-    font-family: 'Roboto';
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #188ce8;
 }
 
 /* button 
 /* Кнопки фільтрів */
 
 .button {
-    background-color: var(--background-color) ;
-    color: var(--primary-text-color);
-    font-family: inherit;  
-font-weight: 700;
-font-size: 16px;
-line-height: 1.9;
-align-items: center;
-text-align: center;
-letter-spacing: 0.06em;
-
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
 }
 .button:hover,
 .button:focus {
-    background-color: var(--accent-color);
-    color: var(--background-color);
+  background-color: var(--accent-color);
+  color: var(--background-color);
 }
 
 /* стилізуємо секції,заголовки,абзаци
 (section, title, section-title,text),
  через надання кожному елементу class */
 
+.team {
+  background-color: #f5f4fa;
+}
+.card {
+  background-color: #ffffff;
+}
 .section-title {
-    color: #212121;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
+  color: #212121;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+.filters {
+  text-decoration: none;
+  color: var(--primary-text-color);
 }
 
 .title {
-    font-family: 'Roboto';
-font-weight: 700;
-font-size: 14px;
-line-height: 16px;
-letter-spacing: 0.03em;
- }
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+}
 
 .text {
-    color: var(--title-text-color);
-    font-family: 'Roboto';
-font-weight: 400;
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
- 
+
 /* Секція з адресами, футер */
 
-.footer{
-    background-color: var(--footer-text-color);
-
+.footer {
+  background-color: var(--footer-text-color);
 }
 
 .adress .street {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color:var(--background-color);
-    text-decoration: none;
-    
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--background-color);
+  text-decoration: none;
 }
 .adress .contacts {
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-color: rgba(255, 255, 255, 0.6);
-text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
 
+.contacts:hover,
+.contacts:focus {
+  color: var(--accent-color);
 }
