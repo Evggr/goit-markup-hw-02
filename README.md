@@ -1,2 +1,2 @@
-# goit-markup-hw-02
-Розмітка сторінки portfolio.html, та стилізація в css.
+# goit-markup-hw-01
+Розмітка сторінки вебстудії
