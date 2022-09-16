@@ -34,7 +34,7 @@
  500
  700
  900 */
-
+/* --------------------CSS ЗМІННІ---------------------------- */
 :root {
   --primary-text-color: #212121;
   --title-text-color: #757575;
@@ -45,18 +45,28 @@
   --hero-text-color: #ffffff;
   --logo-white-text-color: #ffffff;
   --contacts-text-color: rgba(255, 255, 255, 0.6);
+  --team-background-color: #f5f4fa;
+  --hover-hero-button: #188ce8;
 }
+/* ------------------------------------------------------------
+
+-------ЗАДАЄМО ЗНАЧЕННЧ BODY ЯКІ БУДУТЬ УНАСЛІДУВАТИ ІНШІ ЕЛ-ТИ------------ */
+
 .body {
   font-family: "Roboto", sans-serif;
   background-color: var(--background-color);
   color: var(--primary-text-color);
   letter-spacing: 0.03em;
 }
+/* ---------------------------------------------------------------------------
 
+-------------СТИЛЬ-УТИЛІТА ДЛЯ ПРИБИРАННЯ КРАПОК В СПИСКАХ-------------------- */
 .list {
   list-style: none;
 }
+/* ------------------------------------------------------------------------
 
+------------------ПАТТЕРН ДЛЯ ПРИХОВУВАННЯ ЗАГОЛОВКІВ------------------------ */
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -69,9 +79,9 @@
   clip-path: inset(50%);
   margin: -1px;
 }
+/* ------------------------------------------------------------------------
 
-/* logo */
-
+---------------СТИЛІЗАЦІЯ ЛОГОТИПУ----------------------------------------- */
 .logo {
   color: var(--accent-color);
   font-family: "Raleway", sans-serif;
@@ -80,14 +90,19 @@
   line-height: 1.19;
   text-decoration: none;
 }
+/* -------------------------------------------------------------------------
+
+-------------------НАДАННЯ ЛОГО РІЗНИХ КОЛЬОРІВ---------------------------- */
+
 .logo-header {
   color: var(--primary-text-color);
 }
 .logo-footer {
   color: var(--logo-white-text-color);
 }
+/* ---------------------------------------------------------------------------
 
-/* site-nav */
+-------------------НАВІГАЦІЯ ПО САЙТУ-------------------------------------- */
 
 .site-nav .link {
   color: var(--primary-text-color);
@@ -119,8 +134,9 @@
 .list-link:focus {
   color: var(--accent-color);
 }
+/* ----------------------------------------------------------------------------
 
-/* main */
+---------------------MAIN SECTION-HERO BUTTON-HERO----------------------------------------------------- */
 
 .hero {
   background-color: var(--hero-background-color);
@@ -141,22 +157,21 @@
 .hero-button {
   font-family: inherit;
   background-color: var(--accent-color);
-  color: #ffffff;
+  color: var(--hero-text-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   cursor: pointer;
+  border-color: transparent;
+  border-radius: 4px;
 }
 .hero-button:hover,
 .hero-button:focus {
-  background-color: #188ce8;
+  background-color: var(--hover-hero-button);
 }
 
-/* button 
-/* Кнопки фільтрів */
-
-/* Наші переваги */
+/* ----------ЗАГОЛОВКИ ТА АБЗАЦИ ДО "НАШІ ПЕРЕВАГИ"-------------------------------- */
 
 .caption {
   font-weight: 700;
@@ -169,16 +184,52 @@
   font-size: 14px;
   line-height: 1.71;
 }
+/* ----------------------------------------------------------------------------
+
+----------------------Чим ми займаємося----------------------------- */
+.section-title {
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+/* -----------------------------------------------------------------------
+
+---------------------Наша команда------------------------------------------ */
+
+.team {
+  background-color: var(--team-background-color);
+}
+
+.card {
+  background-color: var(--background-color);
+}
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.text {
+  color: var(--title-text-color);
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+/* --------------------Кнопки фільтрів у Портфоліо----------------------------- */
 
 .button {
   font-family: inherit;
-  background-color: var(--background-color);
+  background-color: var(--team-background-color);
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.06em;
   cursor: pointer;
+  border-color: transparent;
+  border-radius: 4px;
 }
 .button:hover,
 .button:focus {
@@ -186,41 +237,12 @@
   color: var(--background-color);
 }
 
-/* стилізуємо секції,заголовки,абзаци
-(section, title, section-title,text),
- через надання кожному елементу class */
-
-.team {
-  background-color: #f5f4fa;
-}
-.card {
-  background-color: #ffffff;
-}
-.section-title {
-  color: #212121;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-}
 .filters {
   text-decoration: none;
   color: var(--primary-text-color);
 }
-
-.title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-
-.text {
-  color: var(--title-text-color);
-  font-size: 16px;
-  line-height: 1.87;
-}
-
-/* Секція з адресами, футер */
+/* -------------------------------------------------------------------------- */
+/* ---------------------Секція з адресами FOOTER------------------ */
 
 .footer {
   background-color: var(--footer-text-color);
@@ -240,8 +262,8 @@
   color: var(--contacts-text-color);
   text-decoration: none;
 }
-
 .contacts:hover,
 .contacts:focus {
   color: var(--accent-color);
 }
+/* -------------------------------------------------------------------- */
