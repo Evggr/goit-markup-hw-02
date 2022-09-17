@@ -255,6 +255,12 @@
   color: var(--background-color);
   text-decoration: none;
 }
+
+.street:hover,
+.street:focus {
+color:var(--accent-color)
+}
+
 .adress .contacts {
   font-style: normal;
   font-size: 14px;
